@@ -1,0 +1,22 @@
+1- crie uma pasta components dentro da pasta src
+2- dentro da pasta components crie uma pasta chamada Header
+3- dentro da pasta Header crie um arquivo chamado Header.jsx
+4- copie dentro dessa pasta o código abaixo:
+
+import React from 'react'
+
+import Style from './Header.module.css';
+
+const Header = ({nome}) => {
+  return (
+    <header className={Style.header}>
+        <h1>{nome}</h1>
+
+        <div className={Style.menuOptions}>
+            <a href='#contact'>Contato</a>
+        </div>
+    </header>
+  )
+}
+
+export default Header;

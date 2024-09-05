@@ -1,0 +1,44 @@
+1- vá para a pasta Header
+2- substitua o conteúdo do arquivo Header.module.css pelo código abaixo:
+
+.header {
+    display: flex;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    background-color:  rgb(43, 46, 51);
+}
+
+.header h1 {
+    color: white;
+}
+
+.menuOptions {
+    margin-right: 40px;
+}
+
+.menuOptions a{
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.menuOptions a:hover{
+    font-weight: bold;
+}
+
+@media screen and (max-width: 800px) {
+    .menuOptions {
+        font-size: .6em;
+    }
+
+    .header h1 {
+        font-size: 1.5rem;
+    }
+
+    .menuOptions a:hover {
+        font-weight: 400;
+    }
+}

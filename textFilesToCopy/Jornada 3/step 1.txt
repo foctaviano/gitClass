@@ -1,0 +1,30 @@
+1- Crie uma psta chamada Contact dentro da pasta components
+2- Crie um arquivo chamado Contact.jsx dentro da pasta
+3- copie o código abaixo dentro da pasta: [
+
+import Style from './Contact.module.css';
+
+const Contact = ({socialMedias}) => {
+
+  return (
+    <section className={Style.contact}>
+        <h2>Contact me</h2>
+
+        <div className={Style.contactWays}>
+          
+          {socialMedias.length > 0 ? socialMedias.map((item, index) => {
+            return(
+            <div key={index} className={Style.contactCard}>
+              <h3>{item.name}</h3>
+              <p>{item.message}</p>
+              {item.link ? (<a href={item.link}>{item.name}</a>) : (<p>{item.others}</p>)}
+            </div>
+            )
+          }) : (<></>)}
+
+        </div>
+    </section>
+  )
+}
+
+export default Contact;

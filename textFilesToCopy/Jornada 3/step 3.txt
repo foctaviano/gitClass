@@ -1,0 +1,28 @@
+1- vá para o arquivo App.js
+2- substitua o código existente pelo código abaixo:
+
+import './App.css';
+
+import Header from './components/Header/Header';
+import PersonalBanner from './components/PersonalBanner/PersonalBanner';
+import AboutMe from './components/AboutMe/AboutMe';
+import Contact from './components/Contact/Contact';
+
+function App() {
+  return (
+    <div className="App">
+
+        <Header nome="seu nome aqui"/>
+
+        <PersonalBanner />
+
+        <AboutMe />
+
+        <Contact socialMedias={[ {name: "Whatsapp", link: "link da rede aqui", message: "Você pode me contatar pelo whatsapp pelo seguinte link:"}, {name: "LinkedIn", link: "Link da rede aqui", message: "Você pode acessar meu LinkedIn pelo seguinte link"}, {name: "Email", link:"", message: "Você pode me contatar pelo email:", others: "seu email aqui"} ]}/>
+
+    </div>
+  );
+}
+
+export default App;
+
